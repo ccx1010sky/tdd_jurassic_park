@@ -7,6 +7,7 @@ describe('Park', function() {
   beforeEach(function () {
     
     park1 = new Park('Paris Disney Park',20)
+    dinosaur = new Dinosaur("t-rex", "carnivore", 50);
 
 
   })
@@ -23,9 +24,18 @@ describe('Park', function() {
     assert.strictEqual(actual,20);
   });
 
-  it('should have a collection of dinosaurs');
+  it('should have a collection of dinosaurs',function(){
 
-  it('should be able to add a dinosaur to its collection');
+    const actual = park1.dinosaur_collection.length
+    assert.strictEqual(actual,0)
+  });
+
+  it('should be able to add a dinosaur to its collection',function(){
+    park1.addDinosaur(dinosaur)
+    const actual = park1.dinosaur_collection.length;
+    assert.strictEqual(actual, 1);
+
+  });
 
   it('should be able to remove a dinosaur from its collection');
 
