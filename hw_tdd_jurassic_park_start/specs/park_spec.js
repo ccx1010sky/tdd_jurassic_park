@@ -4,10 +4,14 @@ const Dinosaur = require('../models/dinosaur.js');
 
 describe('Park', function() {
 
+  let park1;
+
   beforeEach(function () {
     
     park1 = new Park('Paris Disney Park',20)
     dinosaur = new Dinosaur("t-rex", "carnivore", 50);
+    dinosaur2 = new Dinosaur("raptor", "carnivore", 90);
+    dinosaur3 = new Dinosaur("megladon", "carnivore", 100);
 
 
   })
@@ -37,7 +41,15 @@ describe('Park', function() {
 
   });
 
-  it('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection',function(){
+
+    park1.addDinosaur(dinosaur)
+    park1.addDinosaur(dinosaur2)
+    park1.addDinosaur(dinosaur3)
+    park1.removeDinosaur()
+    const actual = park1.dinosaur_collection.length
+    assert.strictEqual(actual,2)
+  });
 
   it('should be able to find the dinosaur that attracts the most visitors');
 
