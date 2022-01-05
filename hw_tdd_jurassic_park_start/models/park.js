@@ -22,12 +22,7 @@ Park.prototype.mostAttractedDinosaur = function () {
     }
   }
   return theMost;
-//------------------------------------------------
-//  for(let item of this.dinosaur_collection){
-//      numbers = [];
-//      num.push(item.guestsAttractedPerDay);
-//      result = max(numbers)
-//  }
+
 };
 
 module.exports = Park;
