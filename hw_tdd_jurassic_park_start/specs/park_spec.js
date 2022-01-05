@@ -6,15 +6,22 @@ describe('Park', function() {
 
   beforeEach(function () {
     
+    park1 = new Park('Paris Disney Park',20)
 
 
   })
 
-  it('should have a name'function(){
+  it('should have a name',function(){
+    const actual = park1.name;
+    assert.strictEqual(actual,'Paris Disney Park')
+
     
   });
 
-  it('should have a ticket price');
+  it('should have a ticket price', function(){
+    const actual = park1.ticket_price;
+    assert.strictEqual(actual,20);
+  });
 
   it('should have a collection of dinosaurs');
 

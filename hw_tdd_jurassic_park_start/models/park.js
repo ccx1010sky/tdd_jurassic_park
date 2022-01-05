@@ -3,3 +3,5 @@ const Park = function(name,ticket_price){
     this.ticket_price = ticket_price;
     this.collection = []
 }
+
+module.exports = Park
